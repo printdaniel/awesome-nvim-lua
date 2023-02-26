@@ -9,8 +9,6 @@ return require('packer').startup(function(use)
     -- functional plugins
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/cmp-nvim-lsp'
-    use 'folke/lsp-colors.nvim'                                       -- Para Trouble
-    use 'nvim-tree/nvim-web-devicons'                                 -- También Para Trouble
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/nvim-cmp'
@@ -27,8 +25,6 @@ return require('packer').startup(function(use)
     use 'kdheepak/lazygit.nvim'
     use 'terrortylor/nvim-comment'
     use 'rafamadriz/friendly-snippets'
-    use {'turbio/bracey.vim', run = 'cd app & npm install --prefix server'}
-    use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'}
     use 'sbdchd/neoformat'
     use {
         "ur4ltz/surround.nvim",
@@ -55,11 +51,7 @@ return require('packer').startup(function(use)
         }
     }
   
-    use {
-        'phaazon/hop.nvim',
-        as = 'hop'
-    }
-  
+     
     use {
         'akinsho/nvim-bufferline.lua',
         requires = 'kyazdani42/nvim-web-devicons'
@@ -100,6 +92,7 @@ return require('packer').startup(function(use)
         requires = 'kyazdani42/nvim-web-devicons',
     }
 
+
     use {
   "folke/trouble.nvim",
   requires = "nvim-tree/nvim-web-devicons",
@@ -111,7 +104,6 @@ return require('packer').startup(function(use)
     }
   end
 }
+    
 
-
-
-   end)
+end)

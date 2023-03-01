@@ -34,7 +34,6 @@ require('plug_config.dashboard')
 require('plug_config.nvim-tree')
 require('plug_config.telescope')
 
-
 -- CpHelper config
 vim.g.cphdir = os.getenv( 'HOME' )..'/problems'
 

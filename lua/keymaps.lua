@@ -4,9 +4,6 @@ keymap('n', '<Leader>o', '<cmd> Telescope oldfiles <cr>')
 keymap('n', '<Leader>s', '<cmd> Telescope live_grep <cr>')
 keymap('n', '<Leader>b', '<cmd> Telescope find_files <cr>')
 
--- Bracey bindings
-keymap('n', '<Leader>bb', '<cmd> BraceyStop <cr>')
-keymap('n', '<Leader>bbb', '<cmd> BraceyReload <cr>')
 
 -- Bufferline bindings
 keymap('n', 'f', '<cmd> BufferLinePick <cr>')
@@ -16,9 +13,6 @@ keymap('n', '<S-TAB>', '<cmd> BufferLineCyclePrev <cr>')
 keymap('n', 'm.', '<cmd> BufferLineMoveNext <cr>')
 keymap('n', 'm,', '<cmd> BufferLineMovePrev <cr>')
 
--- Hope bindings
-keymap('n', ';j', '<cmd> HopWord <cr>')
-keymap('n', ';l', '<cmd> HopLineStart <cr>')
 
 -- LSP Diagnostics Toggle bindings
 keymap('n', '<Leader>dd', '<cmd> ToggleDiag <cr>')

@@ -1,5 +1,5 @@
 vim.o.background = "dark" -- or "light" for light mode
--- vim.cmd([[colorscheme gruvbox]])
+-- vim.cmd([[colorscheme nightfox]])
 -- vim.cmd([[colorscheme nightfox]])
 
 -- vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha

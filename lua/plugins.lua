@@ -54,11 +54,9 @@ return require('packer').startup(function(use)
     }
   
      
-    use {
-        'akinsho/nvim-bufferline.lua',
-        requires = 'kyazdani42/nvim-web-devicons'
-    }
-  
+    use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'} 
+    
+
     use {
         'p00f/cphelper.nvim',
         requires = {
@@ -96,15 +94,15 @@ return require('packer').startup(function(use)
 
 
     use {
-  "folke/trouble.nvim",
-  requires = "nvim-tree/nvim-web-devicons",
-  config = function()
-    require("trouble").setup {
+        "folke/trouble.nvim",
+        requires = "nvim-tree/nvim-web-devicons",
+        config = function()
+        require("trouble").setup {
       -- your configuration comes here
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
                 }
-    end
+        end
     }
 
      

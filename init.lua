@@ -36,6 +36,7 @@ require('plug_config.telescope')
 
 -- CpHelper config
 vim.g.cphdir = os.getenv( 'HOME' )..'/problems'
-
 -- Rooter config
+-- clipboard
+vim.o.clipboard = "unnamedplus"
 vim.g.rooter_pattern = { 'input1', 'output1' }

@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
     use 'terrortylor/nvim-comment'
     use 'rafamadriz/friendly-snippets'
     use 'sbdchd/neoformat'
+    use 'ThePrimeagen/harpoon'
 
     use "lukas-reineke/indent-blankline.nvim"
     use {

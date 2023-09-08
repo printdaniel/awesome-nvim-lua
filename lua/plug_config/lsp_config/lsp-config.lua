@@ -7,7 +7,14 @@ local nvim_lsp = require('lspconfig')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
-local servers = {'tsserver', 'hls', 'html', 'lua_ls', 'bashls','clangd', 'golangci_lint_ls', 'gopls'}
+local servers = {
+    'tsserver', 
+    'hls', 
+    'html','bashls',
+    'clangd',
+    'gopls', 
+    'lua_ls'
+    }
 
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
@@ -20,8 +27,9 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-require 'lspconfig'.golangci_lint_ls.setup{}
+-- require 'lspconfig'.golangci_lint_ls.setup{}
 require 'lspconfig'.gopls.setup{}
 require'lspconfig'.jedi_language_server.setup{}
 require'lspconfig'.bashls.setup{}
 require'lspconfig'.tsserver.setup{}
+-- require'lspconfig'.summeko_lua.setup{}

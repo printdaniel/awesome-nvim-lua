@@ -27,8 +27,14 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- require 'lspconfig'.golangci_lint_ls.setup{}
-require 'lspconfig'.gopls.setup{}
+require 'lspconfig'.gopls.setup{
+    settings = {
+        gopls = {
+            completeUnimported = true,
+            usePlaceholders = true,
+        },
+    },
+}
 require'lspconfig'.jedi_language_server.setup{}
 require'lspconfig'.bashls.setup{}
 require'lspconfig'.tsserver.setup{}

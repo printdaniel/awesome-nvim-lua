@@ -54,10 +54,8 @@ return require('packer').startup(function(use)
             'nvim-lua/plenary.nvim'
         }
     }
-  
      
     use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'} 
-    
 
     use {
         'p00f/cphelper.nvim',

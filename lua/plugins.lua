@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
     use 'rafamadriz/friendly-snippets'
     use 'sbdchd/neoformat'
     use 'ThePrimeagen/harpoon'
+    use {'stevearc/oil.nvim'}
 
     use "lukas-reineke/indent-blankline.nvim"
     use {

@@ -73,3 +73,5 @@ keymap('n', '<C-p>', '<cmd> lua vim.diagnostic.goto_next() <cr>')
 
 -- Binding to swtich to normal mode in terminal, press <Esc> two times
 vim.cmd(':tnoremap <Esc><Esc> <C-\\><C-n>')
+
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })

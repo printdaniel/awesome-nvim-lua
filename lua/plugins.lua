@@ -3,7 +3,6 @@ return require('packer').startup(function(use)
 
     -- apperative plugins
     use 'hrsh7th/vim-vsnip'
-    use 'glepnir/dashboard-nvim'
     use 'andweeb/presence.nvim'
   
     -- functional plugins
@@ -37,10 +36,11 @@ return require('packer').startup(function(use)
         end
     }
 
+    -- Themes
     use { "ellisonleao/gruvbox.nvim" } 
     use { "catppuccin/nvim", as = "catppuccin" }
-    use {"marko-cerovac/material.nvim"}
-    use "EdenEast/nightfox.nvim"
+    use{ 'rose-pine/neovim', as = 'rose-pine' }
+
     use({"xiyaowong/nvim-transparent",
         config = function()
         require("transparent").setup {
@@ -105,6 +105,5 @@ return require('packer').startup(function(use)
         end
     }
 
-     
 
 end)

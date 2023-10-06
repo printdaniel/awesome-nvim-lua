@@ -35,11 +35,12 @@ return require('packer').startup(function(use)
             require"surround".setup {mappings_style = "surround"}
         end
     }
-
-    -- Themes
+-- ******************** Themes ******************************************--
     use { "ellisonleao/gruvbox.nvim" } 
     use { "catppuccin/nvim", as = "catppuccin" }
-    use{ 'rose-pine/neovim', as = 'rose-pine' }
+    use { 'rose-pine/neovim', as = 'rose-pine' }
+    use {"savq/melange-nvim"}
+    use {"folke/tokyonight.nvim"}
 
     use({"xiyaowong/nvim-transparent",
         config = function()

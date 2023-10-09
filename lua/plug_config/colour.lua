@@ -7,6 +7,6 @@ vim.o.background = "dark" -- or "light" for light mode
 
 -- vim.cmd([[colorscheme material]])
 -- vim.cmd([[colorscheme gruvbox]])
---vim.cmd('colorscheme rose-pine')
-vim.cmd('colorscheme melange')
+vim.cmd('colorscheme rose-pine')
+-- vim.cmd('colorscheme melange')
 -- vim.cmd[[colorscheme tokyonight]]

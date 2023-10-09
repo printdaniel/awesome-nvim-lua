@@ -35,7 +35,7 @@ require 'lspconfig'.gopls.setup{
         },
     },
 }
-require'lspconfig'.jedi_language_server.setup{}
 require'lspconfig'.bashls.setup{}
 require'lspconfig'.tsserver.setup{}
 -- require'lspconfig'.summeko_lua.setup{}
+require'lspconfig'.pyright.setup{}

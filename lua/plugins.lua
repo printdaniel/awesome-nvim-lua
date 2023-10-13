@@ -41,14 +41,8 @@ return require('packer').startup(function(use)
     use { 'rose-pine/neovim', as = 'rose-pine' }
     use {"savq/melange-nvim"}
     use {"folke/tokyonight.nvim"}
-
-    use({"xiyaowong/nvim-transparent",
-        config = function()
-        require("transparent").setup {
-        }
-        end
-        })
-    
+-- ***********************************************************************--
+   
     use {
         'lewis6991/gitsigns.nvim',
         requires = {
@@ -93,7 +87,6 @@ return require('packer').startup(function(use)
         requires = 'kyazdani42/nvim-web-devicons',
     }
 
-
     use {
         "folke/trouble.nvim",
         requires = "nvim-tree/nvim-web-devicons",
@@ -105,6 +98,5 @@ return require('packer').startup(function(use)
                 }
         end
     }
-
 
 end)

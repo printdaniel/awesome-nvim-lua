@@ -23,7 +23,6 @@ return require('packer').startup(function(use)
     use 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'
     use 'terrortylor/nvim-comment'
     use 'rafamadriz/friendly-snippets'
-    use 'sbdchd/neoformat'
     use 'ThePrimeagen/harpoon'
     use "lukas-reineke/indent-blankline.nvim"
     use {

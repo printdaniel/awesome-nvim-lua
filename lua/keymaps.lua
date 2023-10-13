@@ -36,7 +36,6 @@ keymap('i', '<leader>e','<Esc>')
 keymap('v', '<leader>e','<Esc>')
 
 keymap('n', '<F7>', '<cmd> NvimTreeToggle <cr>') --Nvim Tree Toggle
-keymap('n', '<Leader>p', '<cmd> Neoformat <cr>')
 keymap('n', '<Leader>cc', '<cmd> ColorizerToggle <cr>')
 keymap('n', '<Leader>gg', '<cmd> LazyGit <cr>')  -- Lazy Git
 keymap('n', '<Leader>n', '<cmd> enew <cr>')

@@ -22,12 +22,10 @@ return require('packer').startup(function(use)
     use 'windwp/nvim-ts-autotag'
     use 'norcalli/nvim-colorizer.lua'
     use 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'
-    use 'kdheepak/lazygit.nvim'
     use 'terrortylor/nvim-comment'
     use 'rafamadriz/friendly-snippets'
     use 'sbdchd/neoformat'
     use 'ThePrimeagen/harpoon'
-
     use "lukas-reineke/indent-blankline.nvim"
     use {
         "ur4ltz/surround.nvim",
@@ -35,6 +33,13 @@ return require('packer').startup(function(use)
             require"surround".setup {mappings_style = "surround"}
         end
     }
+    use({
+        "kdheepak/lazygit.nvim",
+        -- optional for floating window border decoration
+        requires = {
+            "nvim-lua/plenary.nvim",
+        },
+    })
 -- ******************** Themes ******************************************--
     use { "ellisonleao/gruvbox.nvim" } 
     use { "catppuccin/nvim", as = "catppuccin" }
@@ -42,16 +47,13 @@ return require('packer').startup(function(use)
     use {"savq/melange-nvim"}
     use {"folke/tokyonight.nvim"}
 -- ***********************************************************************--
-   
     use {
         'lewis6991/gitsigns.nvim',
         requires = {
             'nvim-lua/plenary.nvim'
         }
     }
-     
     use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'} 
-
     use {
         'p00f/cphelper.nvim',
         requires = {
@@ -60,7 +62,6 @@ return require('packer').startup(function(use)
             opt = true
         }
     }
-  
     use {
         'hoob3rt/lualine.nvim',
         requires = {
@@ -68,7 +69,6 @@ return require('packer').startup(function(use)
             opt = true
         }
     }
-  
     use {
         'nvim-telescope/telescope.nvim',
         requires = {
@@ -76,27 +76,20 @@ return require('packer').startup(function(use)
             'nvim-lua/plenary.nvim' 
         }
     }
-
     use {
         'nvim-telescope/telescope-fzf-native.nvim', 
         run = 'make' 
     }
-
     use {
         'kyazdani42/nvim-tree.lua',
         requires = 'kyazdani42/nvim-web-devicons',
     }
-
     use {
         "folke/trouble.nvim",
         requires = "nvim-tree/nvim-web-devicons",
         config = function()
         require("trouble").setup {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
                 }
         end
     }
-
 end)

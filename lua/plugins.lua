@@ -4,7 +4,6 @@ return require('packer').startup(function(use)
     -- apperative plugins
     use 'hrsh7th/vim-vsnip'
     use 'andweeb/presence.nvim'
-  
     -- functional plugins
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/cmp-nvim-lsp'
@@ -35,11 +34,14 @@ return require('packer').startup(function(use)
     }
     use({
         "kdheepak/lazygit.nvim",
-        -- optional for floating window border decoration
         requires = {
+            "nvim-telescope/telescope.nvim",
             "nvim-lua/plenary.nvim",
-        },
-    })
+            },
+        config = function()
+            require("telescope").load_extension("lazygit")
+        end,
+        })
 -- ******************** Themes ******************************************--
     use { "ellisonleao/gruvbox.nvim" } 
     use { "catppuccin/nvim", as = "catppuccin" }

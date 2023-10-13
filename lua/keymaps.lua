@@ -4,7 +4,6 @@ keymap('n', '<Leader>o', '<cmd> Telescope oldfiles <cr>')
 keymap('n', '<Leader>s', '<cmd> Telescope live_grep <cr>')
 keymap('n', '<Leader>b', '<cmd> Telescope find_files <cr>')
 
-
 -- Bufferline bindings
 keymap('n', 'f', '<cmd> BufferLinePick <cr>')
 keymap('n', 'F', '<cmd> BufferLinePickClose <cr>')
@@ -12,7 +11,6 @@ keymap('n', '<TAB>', '<cmd> BufferLineCycleNext <cr>')
 keymap('n', '<S-TAB>', '<cmd> BufferLineCyclePrev <cr>')
 keymap('n', 'm.', '<cmd> BufferLineMoveNext <cr>')
 keymap('n', 'm,', '<cmd> BufferLineMovePrev <cr>')
-
 
 -- LSP Diagnostics Toggle bindings
 keymap('n', '<Leader>dd', '<cmd> ToggleDiag <cr>')
@@ -32,17 +30,15 @@ end
 -- Binding for code runner
 keymap('n', '<F5>', '<cmd> Run <cr>')
 
--- Other bindings nvimtree, markdown preview, Neoformat, Colorizer, LazyGit
-
+-- Other bindings nvimtree, Neoformat, Colorizer, LazyGit
 keymap('n', '<leader>w','<cmd> :w <cr>')
 keymap('i', '<leader>e','<Esc>')
 keymap('v', '<leader>e','<Esc>')
 
-keymap('n', '<F7>', '<cmd> NvimTreeToggle <cr>')
-keymap('n', '<leader>md', '<cmd> MarkdownPreviewToggle <cr>')
+keymap('n', '<F7>', '<cmd> NvimTreeToggle <cr>') --Nvim Tree Toggle
 keymap('n', '<Leader>p', '<cmd> Neoformat <cr>')
 keymap('n', '<Leader>cc', '<cmd> ColorizerToggle <cr>')
-keymap('n', '<Leader>gg', '<cmd> LazyGit <cr>')
+keymap('n', '<Leader>gg', '<cmd> LazyGit <cr>')  -- Lazy Git
 keymap('n', '<Leader>n', '<cmd> enew <cr>')
 keymap('n', '<Leader><Space>', '<cmd> noh <cr>')
 keymap('n', '[[', '<cmd> vertical resize +7 <cr>')
@@ -69,7 +65,6 @@ keymap('n', '<space>f', '<cmd> lua vim.lsp.buf.formatting() <cr>')
 keymap('n', '<C-k>', '<cmd> lua vim.lsp.buf.signature_help() <cr>')
 keymap('n', '<C-n>', '<cmd> lua vim.diagnostic.goto_prev() <cr>')
 keymap('n', '<C-p>', '<cmd> lua vim.diagnostic.goto_next() <cr>')
-
 
 -- Binding to swtich to normal mode in terminal, press <Esc> two times
 vim.cmd(':tnoremap <Esc><Esc> <C-\\><C-n>')

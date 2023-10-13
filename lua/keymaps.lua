@@ -30,7 +30,7 @@ end
 -- Binding for code runner
 keymap('n', '<F5>', '<cmd> Run <cr>')
 
--- Other bindings nvimtree, Neoformat, Colorizer, LazyGit
+-- Other bindings nvimtree, Colorizer, LazyGit
 keymap('n', '<leader>w','<cmd> :w <cr>')
 keymap('i', '<leader>e','<Esc>')
 keymap('v', '<leader>e','<Esc>')

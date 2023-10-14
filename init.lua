@@ -33,6 +33,7 @@ require('plug_config.gitsigns')
 require('plug_config.nvim-tree')
 require('plug_config.telescope')
 require('plug_config.harpoon')
+require('plug_config.transparent')
 
 -- CpHelper config
 vim.g.cphdir = os.getenv( 'HOME' )..'/problems'

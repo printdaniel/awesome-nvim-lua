@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
     use 'rafamadriz/friendly-snippets'
     use 'ThePrimeagen/harpoon'
     use "lukas-reineke/indent-blankline.nvim"
+    use "xiyaowong/transparent.nvim"
     use {
         "ur4ltz/surround.nvim",
         config = function()

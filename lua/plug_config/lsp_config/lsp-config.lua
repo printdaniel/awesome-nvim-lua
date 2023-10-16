@@ -10,7 +10,8 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 local servers = {
     'tsserver', 
     'hls', 
-    'html','bashls',
+    'html',
+    'bashls',
     'clangd',
     'gopls', 
     'lua_ls'
@@ -37,7 +38,6 @@ require 'lspconfig'.gopls.setup{
 }
 require'lspconfig'.bashls.setup{}
 require'lspconfig'.tsserver.setup{}
--- require'lspconfig'.summeko_lua.setup{}
 require'lspconfig'.pyright.setup{}
 
 vim.api.nvim_create_autocmd('FileType', {

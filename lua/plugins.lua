@@ -32,29 +32,31 @@ return require('packer').startup(function(use)
             require"surround".setup {mappings_style = "surround"}
         end
     }
-    use({
-        "kdheepak/lazygit.nvim",
-        requires = {
-            "nvim-telescope/telescope.nvim",
-            "nvim-lua/plenary.nvim",
-            },
-        config = function()
-            require("telescope").load_extension("lazygit")
-        end,
-        })
--- ******************** Themes ******************************************--
+-- ************************ Themes ******************************************--
     use { "ellisonleao/gruvbox.nvim" } 
     use { "catppuccin/nvim", as = "catppuccin" }
     use { 'rose-pine/neovim', as = 'rose-pine' }
     use {"savq/melange-nvim"}
     use {"folke/tokyonight.nvim"}
--- ***********************************************************************--
+-- **************************************************************************--
     use {
         'lewis6991/gitsigns.nvim',
         requires = {
             'nvim-lua/plenary.nvim'
         }
     }
+-- *********************** lazigit ******************************************--
+    use({
+    "kdheepak/lazygit.nvim",
+    requires = {
+        "nvim-telescope/telescope.nvim",
+        "nvim-lua/plenary.nvim",
+    },
+    config = function()
+        require("telescope").load_extension("lazygit")
+    end,
+})
+-- **************************************************************************--
     use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'} 
     use {
         'p00f/cphelper.nvim',
@@ -94,6 +96,4 @@ return require('packer').startup(function(use)
                 }
         end
     }
-
-
 end)

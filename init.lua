@@ -26,7 +26,6 @@ require('plug_config.presence')
 require('plug_config.toggle_lsp_diagnostics')
 require('plug_config.lsp_config.lsp-cmp')
 require('plug_config.lsp_config.lsp-config')
--- require('plug_config.lazygit')
 require('plug_config.comment')
 require('plug_config.bufferline')
 require('plug_config.gitsigns')
@@ -35,7 +34,7 @@ require('plug_config.telescope')
 require('plug_config.harpoon')
 require('plug_config.transparent')
 
--- CpHelper config
+-- CpHelper config:
 vim.g.cphdir = os.getenv( 'HOME' )..'/problems'
 -- Rooter config
 -- clipboard

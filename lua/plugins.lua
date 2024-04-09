@@ -38,6 +38,7 @@ return require('packer').startup(function(use)
     use { 'rose-pine/neovim', as = 'rose-pine' }
     use {"savq/melange-nvim"}
     use {"folke/tokyonight.nvim"}
+    use 'marko-cerovac/material.nvim'
 -- **************************************************************************--
     use {
         'lewis6991/gitsigns.nvim',

@@ -40,15 +40,13 @@ return {
                     italic = false,
                 },
             })
-
             vim.cmd("colorscheme rose-pine")
-
             ColorMyPencils()
         end
     },
+
  {
     "craftzdog/solarized-osaka.nvim",
-
     name = "solarized-osaka",
     lazy = true,
     priority = 1000,

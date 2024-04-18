@@ -7,10 +7,6 @@ end)
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
--- Increase/decrease
-keymap.set("n", "+", "<C-a>")
-keymap.set("n", "-", "<C-x>")
-
 -- Select-All
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
@@ -31,9 +27,9 @@ keymap.set("n", "<S-TAB>", "<cmd> BufferLineCyclePrev <cr>", opts)
 keymap.set("n", "m.", "<cmd> BufferLineMoveNext <cr>", opts)
 keymap.set("n", "m,", "<cmd> BufferLineMovePrev <cr>", opts)
 
+
+
 -- Diagnostics
 keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
 end, opts)
-
-

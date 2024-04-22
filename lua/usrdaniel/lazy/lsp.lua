@@ -29,6 +29,7 @@ return {
                 "lua_ls",
                 "rust_analyzer",
                 "gopls",
+                "pyright",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -56,7 +57,6 @@ return {
         })
 
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
-
         cmp.setup({
             snippet = {
                 expand = function(args)
@@ -90,5 +90,3 @@ return {
         })
     end
 }
-
-

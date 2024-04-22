@@ -7,6 +7,9 @@ end)
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+-- Esc
+keymap.set("i", "jj", "<ESC>", { silent = true })
+
 -- Select-All
 keymap.set("n", "<C-a>", "gg<S-v>G")
 

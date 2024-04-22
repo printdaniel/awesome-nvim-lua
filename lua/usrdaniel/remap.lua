@@ -20,14 +20,12 @@ keymap.set("n", "sk", "<C-w>k")
 keymap.set("n", "sj", "<C-w>j")
 keymap.set("n", "sl", "<C-w>l")
 
--- Bufferline
-keymap.set("n", "F", "<cmd> BufferLinePickClose <cr>", opts)
-keymap.set("n", "<TAB>", "<cmd> BufferLineCycleNext <cr>", opts)
-keymap.set("n", "<S-TAB>", "<cmd> BufferLineCyclePrev <cr>", opts)
-keymap.set("n", "m.", "<cmd> BufferLineMoveNext <cr>", opts)
-keymap.set("n", "m,", "<cmd> BufferLineMovePrev <cr>", opts)
-
-
+-- Cokeline
+local map = vim.api.nvim_set_keymap
+map("n", "<S-Tab>", "<Plug>(cokeline-focus-prev)", { silent = true })
+map("n", "<Tab>", "<Plug>(cokeline-focus-next)", { silent = true })
+map("n", "<Leader>p", "<Plug>(cokeline-switch-prev)", { silent = true })
+map("n", "<Leader>n", "<Plug>(cokeline-switch-next)", { silent = true })
 
 -- Diagnostics
 keymap.set("n", "<C-j>", function()

@@ -11,7 +11,7 @@ local opts = { noremap = true, silent = true }
 keymap.set("i", "jj", "<ESC>", { silent = true })
 
 -- Select-All
-keymap.set("n", "<C-a>", "gg<S-v>G")
+keymap.set("i", "jj", "<ESC>", { silent = true })
 
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)
@@ -30,7 +30,4 @@ map("n", "<Tab>", "<Plug>(cokeline-focus-next)", { silent = true })
 map("n", "<Leader>p", "<Plug>(cokeline-switch-prev)", { silent = true })
 map("n", "<Leader>n", "<Plug>(cokeline-switch-next)", { silent = true })
 
--- Diagnostics
-keymap.set("n", "<C-j>", function()
-  vim.diagnostic.goto_next()
-end, opts)
+

@@ -1,4 +1,3 @@
-require("usrdaniel.set")
 require("usrdaniel.remap")
 require("usrdaniel.options")
 require("usrdaniel.lazy_init")

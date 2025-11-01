@@ -31,11 +31,20 @@ return {
 
         -- Mason-LSPConfig
         require("mason-lspconfig").setup({
-            ensure_installed = { "lua_ls", "pyright", "rust_analyzer", "gopls", "clangd" },
-            automatic_enable = true,
+            ensure_installed = {
+                "lua_ls",
+                "pyright",
+                "rust_analyzer",
+                "gopls",
+                "clangd",
+                "sqlls",
+                "marksman",
+                "dockerls",
+                "docker_compose_language_service",
+            },
+            automatic_installation = true,
         })
 
-        -- Configuración de servidores usando lspconfig
         local lspconfig = require("lspconfig")
 
         -- Lua
@@ -49,20 +58,21 @@ return {
             },
         })
 
-        -- Clangd para C/C++
+        -- C/C++
         lspconfig.clangd.setup({
             capabilities = capabilities,
-            cmd = { "clangd", "--background-index" }, -- índice en segundo plano
+            cmd = { "clangd", "--background-index" },
         })
 
-        -- Otros servidores
-        for _, server in ipairs({ "pyright", "rust_analyzer", "gopls" }) do
+        -- Python, Rust, Go, SQL, Markdown, Docker
+        local servers = { "pyright", "rust_analyzer", "gopls", "sqlls", "marksman", "dockerls", "docker_compose_language_service" }
+        for _, server in ipairs(servers) do
             lspconfig[server].setup({
                 capabilities = capabilities,
             })
         end
 
-        -- Configuración de nvim-cmp
+        -- nvim-cmp setup
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
         cmp.setup({
             snippet = {
@@ -97,3 +107,4 @@ return {
         })
     end
 }
+

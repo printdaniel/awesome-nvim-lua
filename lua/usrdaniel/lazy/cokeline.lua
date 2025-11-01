@@ -1,10 +1,14 @@
-return  {
-  "willothy/nvim-cokeline",
-  dependencies = {
-    "nvim-lua/plenary.nvim",        -- Required for v0.4.0+
-    "nvim-tree/nvim-web-devicons", -- If you want devicons
-    "stevearc/resession.nvim"       -- Optional, for persistent history
-  },
-  config = true
+return {
+    {
+        "willothy/nvim-cokeline",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons",
+            "stevearc/resession.nvim",
+        },
+        -- Lazy load: se activa al leer o crear un buffer
+        event = { "BufReadPost", "BufNewFile" },
+        config = true,
+    }
 }
 

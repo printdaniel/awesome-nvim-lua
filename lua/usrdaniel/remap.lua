@@ -1,31 +1,38 @@
+-- ==============================
+-- 🔹 Leader
+-- ==============================
 vim.g.mapleader = " "
 
+-- Recargar configuración
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
-end)
+end, { desc = "Recargar init.lua" })
 
-local keymap = vim.keymap
+-- ==============================
+-- 🔹 Modo Insert
+-- ==============================
 local opts = { noremap = true, silent = true }
 
--- Esc
-keymap.set("i", "jj", "<ESC>", { silent = true })
+-- Esc con 'jj'
+vim.keymap.set("i", "jj", "<ESC>", opts)
 
--- Select-All
-keymap.set("i", "jj", "<ESC>", { silent = true })
+-- ==============================
+-- 🔹 Ventanas
+-- ==============================
+-- Splits
+vim.keymap.set("n", "ss", ":split<CR>", opts)
+vim.keymap.set("n", "sv", ":vsplit<CR>", opts)
 
--- Split window
-keymap.set("n", "ss", ":split<Return>", opts)
-keymap.set("n", "sv", ":vsplit<Return>", opts)
+-- Moverse entre splits
+vim.keymap.set("n", "sh", "<C-w>h", opts)
+vim.keymap.set("n", "sk", "<C-w>k", opts)
+vim.keymap.set("n", "sj", "<C-w>j", opts)
+vim.keymap.set("n", "sl", "<C-w>l", opts)
 
--- Move window
-keymap.set("n", "sh", "<C-w>h")
-keymap.set("n", "sk", "<C-w>k")
-keymap.set("n", "sj", "<C-w>j")
-keymap.set("n", "sl", "<C-w>l")
-
--- Cokeline
-local map = vim.api.nvim_set_keymap
-map("n", "<S-Tab>", "<Plug>(cokeline-focus-prev)", { silent = true })
-map("n", "<Tab>", "<Plug>(cokeline-focus-next)", { silent = true })
-map("n", "<Leader>p", "<Plug>(cokeline-switch-prev)", { silent = true })
-map("n", "<Leader>n", "<Plug>(cokeline-switch-next)", { silent = true })
+-- ==============================
+-- 🔹 Cokeline
+-- ==============================
+vim.keymap.set("n", "<Tab>", "<Plug>(cokeline-focus-next)", { silent = true, desc = "Siguiente buffer" })
+vim.keymap.set("n", "<S-Tab>", "<Plug>(cokeline-focus-prev)", { silent = true, desc = "Buffer anterior" })
+vim.keymap.set("n", "<Leader>n", "<Plug>(cokeline-switch-next)", { silent = true, desc = "Siguiente buffer (switch)" })
+vim.keymap.set("n", "<Leader>p", "<Plug>(cokeline-switch-prev)", { silent = true, desc = "Buffer anterior (switch)" })

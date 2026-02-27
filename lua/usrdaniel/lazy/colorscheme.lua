@@ -1,3 +1,7 @@
+-- ==========================================
+-- 🎨 Colorscheme Manager para Lazy.nvim
+-- ==========================================
+
 function ColorMyPencils(color)
 	color = color or "solarized-osaka"
 	vim.cmd.colorscheme(color)
@@ -72,3 +76,4 @@ return {
   priority = 1000,
   config = true },
 }
+

@@ -45,10 +45,8 @@ return {
             automatic_installation = true,
         })
 
-        local lspconfig = require("lspconfig")
-
         -- Lua
-        lspconfig.lua_ls.setup({
+        vim.lsp.config("lua_ls", {
             capabilities = capabilities,
             settings = {
                 Lua = {
@@ -59,7 +57,7 @@ return {
         })
 
         -- C/C++
-        lspconfig.clangd.setup({
+        vim.lsp.config("clangd", {
             capabilities = capabilities,
             cmd = { "clangd", "--background-index" },
         })
@@ -67,10 +65,23 @@ return {
         -- Python, Rust, Go, SQL, Markdown, Docker
         local servers = { "pyright", "rust_analyzer", "gopls", "sqlls", "marksman", "dockerls", "docker_compose_language_service" }
         for _, server in ipairs(servers) do
-            lspconfig[server].setup({
+            vim.lsp.config(server, {
                 capabilities = capabilities,
             })
         end
+
+        -- Habilitar todos los servidores configurados
+        vim.lsp.enable({
+            "lua_ls",
+            "clangd",
+            "pyright",
+            "rust_analyzer",
+            "gopls",
+            "sqlls",
+            "marksman",
+            "dockerls",
+            "docker_compose_language_service",
+        })
 
         -- nvim-cmp setup
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
@@ -107,4 +118,3 @@ return {
         })
     end
 }
-

@@ -1,6 +1,7 @@
 return {
     {
         "nvim-treesitter/nvim-treesitter",
+	branch = "master",
         build = ":TSUpdate",
         -- Lazy load: se carga al leer o crear un buffer de cualquier archivo
         event = { "BufReadPost", "BufNewFile" },

@@ -22,6 +22,9 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup de lazy.nvim
 require("lazy").setup({
     spec = "usrdaniel.lazy",   -- ruta a tus plugins
+    rocks = {
+        enabled = false,        -- 👈 agrega esto: desactiva luarocks/hererocks
+    },
     defaults = {
         --lazy = true,           -- todos los plugins se cargan de forma perezosa por defecto
         version = false,       -- usar latest commit en vez de tag (puedes cambiarlo si quieres)
